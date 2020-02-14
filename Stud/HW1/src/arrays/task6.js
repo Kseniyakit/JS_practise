@@ -1,4 +1,9 @@
-const array = [2, 78, 56, 45];
+/* const array = [2, 78, 56, 45]; */
 
-const arrayReversed = array.reverse();
-console.log(arrayReversed);
+function arrayReversed(arr) {
+    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (arr === undefined)) {
+        return null;
+    }
+    return arr.reverse();
+
+};

@@ -1,19 +1,23 @@
-const array = [2, 78, 56, 45];
+/* const array = [2, 78, 56, 45]; */
 
-function getOddNumbers(arr){
+function getOddNumbers(arr) {
     let oddNumbers = [];
-    for( let i = 0; i<= arr.length; i++){
-        if( (i%2)-1===0){
+    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (arr === undefined)) {
+        return null;
+    }
+    for (let i = 0; i <= arr.length; i++) {
+        if ((i % 2) - 1 === 0) {
             oddNumbers.push(arr[i]);
         }
+        /* console.log(oddNumbers); */
     }
     let sum = 0;
-    for (let i = 0; i < oddNumbers.length; i++){
-       
+    for (let i = 0; i < oddNumbers.length; i++) {
+
         sum += oddNumbers[i];
-       
+
     }
-    console.log (sum);
+    return sum;
 
 }
-console.log(getOddNumbers(array));
+/* console.log(getOddNumbers(array)); */

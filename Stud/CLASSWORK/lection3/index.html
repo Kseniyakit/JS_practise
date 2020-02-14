@@ -35,11 +35,11 @@
     <div id="mocha"></div>
     <script>
         /* function sum(a, b) {
-                                            if (a && b) {
-                                                return a + b;
-                                            }
-                                            return null;
-                                        } */
+                                                            if (a && b) {
+                                                                return a + b;
+                                                            }
+                                                            return null;
+                                                        } */
         describe("sumFunc", function() {
             it("передаем a = 5, b = 10", function() {
                 assert.equal(sumFunc(5, 10), 15);
@@ -56,16 +56,16 @@
         });
         describe("Func", function() {
             it("передаем a = 5, b = 10", function() {
-                assert.equal(sumFunc(5, 10), 15);
+                assert.equal(Func(5, 10), 15);
             });
             it("передаем a = 5, b = 10", function() {
-                assert.equal(sumFunc(null, undefined), null);
+                assert.equal(Func(null, undefined), null);
             });
             it("передаем a = 5, b = 10", function() {
-                assert.equal(sumFunc(5, undefined), null);
+                assert.equal(Func(5, undefined), null);
             });
             it("передаем a = 5, b = 10", function() {
-                assert.equal(sumFunc(null, 10), null);
+                assert.equal(Func(null, 10), null);
             });
         });
     </script>

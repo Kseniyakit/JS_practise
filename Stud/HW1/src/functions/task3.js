@@ -32,6 +32,9 @@ var Small = {
 var a, n, g;
 
 function text2num(s) {
+    if ((s === null) || (s === NaN) || (s === undefined) || (s === "")) {
+        return null;
+    }
     a = s.toString().split(' ');
     n = 0;
     g = 0;
@@ -43,12 +46,9 @@ function feach(w) {
     var x = Small[w];
     if (x != null) {
         g = g + x;
-    }
-    else if (w == "hundred") {
+    } else if (w == "hundred") {
         g = g * 100;
+    } else {
+        console.log("Unknown number: " + w);
     }
- 
-        else { 
-            console.log("Unknown number: "+w); 
-        }
-    }
+}

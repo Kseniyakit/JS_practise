@@ -1,14 +1,17 @@
-const array = [2, 79, 56, 45];
+/* const array = [2, 79, 56, 45]; */
 
-function getOddNumbers(arr){
-    let count = 0;
-    for( let i = 0; i<= arr.length; i++){
-        
-        if( (i%2)-1===0){
-            count ++;
-        }
-       
+function getOddCount(arr) {
+    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (arr === undefined)) {
+        return null;
     }
-    console.log(count);
+    let count = 0;
+    for (let i = 0; i <= arr.length; i++) {
+
+        if ((i % 2) - 1 === 0) {
+            count++;
+        }
+
+    }
+    return count;
 }
-getOddNumbers(array);
+getOddCount(array);

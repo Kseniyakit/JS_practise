@@ -24,8 +24,32 @@
     </script>
     <script src="./task2.js">
     </script>
-
-
+    <script src="./task3.js">
+    </script>
+    <script src="./task4.js">
+    </script>
+    <script src="./task5.js">
+    </script>
+    <script src="./task6.js">
+    </script>
+    <script src="./task7.js">
+    </script>
+    <script src="./task8.js">
+    </script>
+    <script src="./task9_1.js">
+    </script>
+    <script src="./task9_2.js">
+    </script>
+    <script src="./task9_3.js">
+    </script>
+    <script src="./task10_1.js">
+    </script>
+    <script src="./task10_2.js">
+    </script>
+    <script src="./task10_3.js">
+    </script>
+    <script src="./task10_4.js">
+    </script>
     <title>Document</title>
 
 </head>
@@ -34,18 +58,282 @@
     <!-- в элементе с id="mocha" будут результаты тестов -->
     <div id="mocha"></div>
     <script>
-   
         describe("getMinValue", function() {
             it("передаем a = [2, 78, 56, 45]", function() {
                 assert.equal(getMinValue([2, 78, 56, 45]), 2);
             });
-        
-        });
-        describe("getMinValue", function() {
+
             it("передаем a = null", function() {
                 assert.equal(getMinValue(null), null);
             });
-        
+
+
+            it("передаем a = NaN", function() {
+                assert.equal(getMinValue(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(getMinValue(""), null);
+            });
+        });
+
+        describe("getMaxValue", function() {
+            it("передаем a = [2, 78, 56, 45]", function() {
+                assert.equal(getMaxValue([2, 78, 56, 45]), 78);
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(getMaxValue(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(getMaxValue(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(getMaxValue(""), null);
+            });
+
+        });
+        describe("getIndexValue", function() {
+            it("передаем a = [2, 78, 56, 45]", function() {
+                assert.equal(getIndexValue([2, 78, 56, 45]), 0);
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(getIndexValue(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(getIndexValue(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(getIndexValue(""), null);
+            });
+
+        });
+        describe("getInddexOfMaxValue", function() {
+            it("передаем a = [2, 78, 56, 45]", function() {
+                assert.equal(getInddexOfMaxValue([2, 78, 56, 45]), 1);
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(getInddexOfMaxValue(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(getInddexOfMaxValue(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(getInddexOfMaxValue(""), null);
+            });
+
+        });
+        describe("getOddNumbers", function() {
+            it("передаем a = [2, 78, 56, 45]", function() {
+                assert.equal(getOddNumbers([2, 78, 56, 45]), 123);
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(getOddNumbers(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(getOddNumbers(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(getOddNumbers(""), null);
+            });
+
+        });
+        describe("arrayReversed", function() {
+            it("передаем arr = [2, 78, 56, 45]", function() {
+                assert.equal(console.log(arrayReversed([2, 78, 56, 45]), ([45, 56, 78, 2])));
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(arrayReversed(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(arrayReversed(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(arrayReversed(""), null);
+            });
+
+        });
+        describe("getOddCount", function() {
+            it("передаем arr = [2, 78, 56, 45]", function() {
+                assert.equal(getOddCount([2, 78, 56, 45]), 2);
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(getOddCount(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(getOddCount(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(getOddCount(""), null);
+            });
+        });
+        describe("numberSwitch", function() {
+            it("передаем arr = [2, 78, 56, 45]", function() {
+                assert.equal(console.log(numberSwitch([2, 78, 56, 45]), [6, 7, 8, 9, 10]));
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(numberSwitch(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(numberSwitch(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(numberSwitch(""), null);
+            });
+        });
+        describe("bubbleSort", function() {
+            it("передаем arr = [2, 78, 56, 45]", function() {
+                assert.equal(console.log(bubbleSort([2, 78, 56, 45]), [2, 45, 56, 79]));
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(bubbleSort(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(bubbleSort(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(bubbleSort(""), null);
+            });
+        });
+        describe("selectionSort", function() {
+            it("передаем arr = [2, 78, 56, 45]", function() {
+                assert.equal(console.log(selectionSort([2, 78, 56, 45]), [2, 45, 56, 79]));
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(selectionSort(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(selectionSort(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(selectionSort(""), null);
+            });
+        });
+        describe("insertionSort", function() {
+            it("передаем arr = [2, 78, 56, 45]", function() {
+                assert.equal(console.log(insertionSort([2, 78, 56, 45]), [2, 45, 56, 79]));
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(insertionSort(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(insertionSort(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(insertionSort(""), null);
+            });
+        });
+        describe("quickSort", function() {
+            it("передаем arr = [2, 78, 56, 45]", function() {
+                assert.equal(console.log(quickSort([2, 78, 56, 45]), [2, 45, 56, 79]));
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(quickSort(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(quickSort(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(quickSort(""), null);
+            });
+        });
+        describe("mergeSort", function() {
+            it("передаем arr = [2, 78, 56, 45]", function() {
+                assert.equal(console.log(mergeSort([2, 78, 56, 45]), [2, 45, 56, 79]));
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(mergeSort(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(mergeSort(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(mergeSort(""), null);
+            });
+        });
+        describe("ShellSort", function() {
+            it("передаем arr = [2, 78, 56, 45]", function() {
+                assert.equal(console.log(ShellSort([2, 78, 56, 45]), [2, 45, 56, 79]));
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(ShellSort(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(ShellSort(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(ShellSort(""), null);
+            });
+        });
+        describe("heapSort", function() {
+            it("передаем arr = [2, 78, 56, 45]", function() {
+                assert.equal(console.log(heapSort([2, 78, 56, 45]), [2, 45, 56, 79]));
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(heapSort(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(heapSort(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(heapSort(""), null);
+            });
         });
     </script>
     <!-- запустить тесты! -->

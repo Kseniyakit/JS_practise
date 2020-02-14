@@ -1,15 +1,20 @@
-const x = -5;
-const y = 6;
+/* const x = -5;
+const y = 6; */
 
- if ((x>0)&&(y>0)){
-     console.log("I четверть");
- };
- if ((x>0)&&(y<0)){
-    console.log("II четверть");
-};
-if ((x<0)&&(y<0)){
-    console.log("III четверть");
-};
-if ((x<0)&&(y>0)){
-    console.log("IV четверть");
-};
+function getNumQuarter(x, y) {
+    if ((x === null) || (x === NaN) || (x === undefined) || (y === null) || (y === NaN) || (y === undefined)) {
+        return null;
+    }
+    if ((x > 0) && (y > 0)) {
+        return "I четверть";
+    };
+    if ((x > 0) && (y < 0)) {
+        return "II четверть";
+    };
+    if ((x < 0) && (y < 0)) {
+        return "III четверть";
+    };
+    if ((x < 0) && (y > 0)) {
+        return "IV четверть";
+    };
+}

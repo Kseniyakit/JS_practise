@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- подключаем стили Mocha, для отображения результатов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <!-- подключаем библиотеку Mocha -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+    <script>
+        mocha.setup('bdd');
+    </script>
+
+    <!-- подключаем chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <!-- в chai есть много всего, выносим assert в глобальную область -->
+    <script>
+        var assert = chai.assert;
+    </script>
+    <script src="./task1.js">
+    </script>
+    <script src="./task2.js">
+    </script>
+    <script src="./task3.js">
+    </script>
+    <script src="./task4.js">
+    </script>
+    <script src="./task5.js">
+    </script>
+
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- в элементе с id="mocha" будут результаты тестов -->
+    <div id="mocha"></div>
+    <script>
+        describe("getMultEven", function() {
+            it("передаем a = 3,5", function() {
+                assert.equal(getMultEven(3, 5), 8);
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(getMultEven(null), null);
+            });
+
+
+            it("передаем a = NaN", function() {
+                assert.equal(getMultEven(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(getMultEven(""), null);
+            });
+        });
+        describe("getNumQuarter", function() {
+            it("передаем a = -5,6", function() {
+                assert.equal(getNumQuarter(-5, 6), "IV четверть");
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(getNumQuarter(null), null);
+            });
+
+
+            it("передаем a = NaN", function() {
+                assert.equal(getNumQuarter(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(getNumQuarter(""), null);
+            });
+        });
+        describe("arraySum", function() {
+            it("передаем a = [-1,4,5]", function() {
+                assert.equal(arraySum([-1, 4, 5]), 9);
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(arraySum(null), null);
+            });
+
+
+            it("передаем a = NaN", function() {
+                assert.equal(arraySum(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(arraySum(""), null);
+            });
+        });
+    </script>
+    <!-- запустить тесты! -->
+    <script>
+        mocha.run();
+    </script>
+</body>
+
+</html>

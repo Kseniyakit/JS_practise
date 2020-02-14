@@ -1,7 +1,11 @@
-function getWeekDay(date){
+function getWeekDay(date) {
+    if ((date === null) || (date === NaN) || (date === undefined) || (date === "")) {
+        return null;
+    }
     let days = ['Вс', "Пн", "Вт", "Срд", "Чт", "Пт", "Сб"];
-    return days[date.getDay()];
+    let res = days[date.getDay()];
+    return res;
 }
 
-let date = new Date();
-console.log(getWeekDay(date));
+/* let date = new Date();
+console.log(getWeekDay(date)); */

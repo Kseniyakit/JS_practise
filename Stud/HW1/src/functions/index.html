@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- подключаем стили Mocha, для отображения результатов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <!-- подключаем библиотеку Mocha -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+    <script>
+        mocha.setup('bdd');
+    </script>
+
+    <!-- подключаем chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <!-- в chai есть много всего, выносим assert в глобальную область -->
+    <script>
+        var assert = chai.assert;
+    </script>
+    <script src="./task1.js">
+    </script>
+    <script src="./task2.js">
+    </script>
+    <script src="./task3.js">
+    </script>
+    <script src="./task4.js">
+    </script>
+
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- в элементе с id="mocha" будут результаты тестов -->
+    <div id="mocha"></div>
+    <script>
+        describe("getWeekDay", function() {
+            it("передаем a = new Date()", function() {
+                assert.equal(getWeekDay(new Date()), "Пт");
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(getWeekDay(null), null);
+            });
+
+
+            it("передаем a = NaN", function() {
+                assert.equal(console.log((getWeekDay(NaN), null)));
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(getWeekDay(""), null);
+            });
+        });
+        describe("letterToNum", function() {
+            it("передаем a = 10", function() {
+                assert.equal(letterToNum(10), "ten");
+            });
+            it("передаем a = 5", function() {
+                assert.equal(letterToNum(5), "five");
+            });
+            it("передаем a = 67", function() {
+                assert.equal(letterToNum(67), "sixty seven");
+            });
+            it("передаем a = 100", function() {
+                assert.equal(letterToNum(100), "one hundred");
+            });
+            it("передаем a = -5", function() {
+                assert.equal(letterToNum(-5), "Negative numbers are not supported.");
+            });
+            it("передаем a = 122", function() {
+                assert.equal(letterToNum(122), "one hundred and twenty two");
+            });
+            it("передаем a = null", function() {
+                assert.equal(letterToNum(null), null);
+            });
+            it("передаем a = NaN", function() {
+                assert.equal(console.log((letterToNum(NaN), null)));
+            });
+            it("передаем a = undefined", function() {
+                assert.equal(letterToNum(""), null);
+            });
+        });
+        describe("text2num", function() {
+            it("передаем a = ten", function() {
+                assert.equal(text2num("ten"), 10);
+            });
+            it("передаем a = 5", function() {
+                assert.equal(text2num("five"), 5);
+            });
+            it("передаем a = 67", function() {
+                assert.equal(text2num("sixty seven"), 67);
+            });
+            it("передаем a = 100", function() {
+                assert.equal(text2num("one hundred"), 100);
+            });
+            it("передаем a = 122", function() {
+                assert.equal(text2num("one hundred and twenty two"), 122);
+            });
+            it("передаем a = null", function() {
+                assert.equal(text2num('Six'), 0);
+            });
+            it("передаем a = null", function() {
+                assert.equal(text2num(null), null);
+            });
+            it("передаем a = NaN", function() {
+                assert.equal(console.log((text2num(NaN), null)));
+            });
+            it("передаем a = undefined", function() {
+                assert.equal(text2num(""), null);
+            });
+        });
+        describe("findLength", function() {
+            it("передаем a = 2,4,2,4", function() {
+                assert.equal(findLength(2, 4, 2, 4), 3);
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(findLength(null), null);
+            });
+
+
+            it("передаем a = NaN", function() {
+                assert.equal(console.log((findLength(NaN), null)));
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(findLength(""), null);
+            });
+        });
+    </script>
+    <!-- запустить тесты! -->
+    <script>
+        mocha.run();
+    </script>
+</body>
+
+</html>
