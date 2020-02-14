@@ -1,11 +1,20 @@
 const array = [2, 78, 56, 45];
 
-function getMaxValue(arr){
+function getMinValue(arr){
+    if(!Array.isArray(arr)|| (arr === null) || (arr === undefined) ){
+        return null;
+}
+
     let min = arr[0]; 
-    for (let i = 0; i < arr.length; i++) { 
+   
+   for (let i = 0; i < arr.length; i++) { 
         if (min > arr[i]) min = arr[i]; 
     }
     return min;
 }
 
-getMaxValue(array);
+
+
+getMinValue(array);
+
+window.getMaxValue = getMaxValue;
