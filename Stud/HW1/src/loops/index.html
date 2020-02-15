@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- подключаем стили Mocha, для отображения результатов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <!-- подключаем библиотеку Mocha -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+    <script>
+        mocha.setup('bdd');
+    </script>
+
+    <!-- подключаем chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <!-- в chai есть много всего, выносим assert в глобальную область -->
+    <script>
+        var assert = chai.assert;
+    </script>
+    <script src="./task1.js">
+    </script>
+    <script src="./task2.js">
+    </script>
+    <script src="./task3.js">
+    </script>
+    <script src="./task4.js">
+    </script>
+    <script src="./task5.js">
+    </script>
+    <script src="./task6.js">
+    </script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- в элементе с id="mocha" будут результаты тестов -->
+    <div id="mocha"></div>
+    <script>
+        describe("getSum", function() {
+            it("Запускаем функцию", function() {
+                assert.equal(getSum(), 4950);
+            });
+        });
+        describe("isPrime", function() {
+            it("передаем a = 5", function() {
+                assert.equal(isPrime(5), "Простое число");
+            });
+            it("передаем a = 6", function() {
+                assert.equal(isPrime(6), "Составное число");
+            });
+            it("передаем a = 2", function() {
+                assert.equal(isPrime(2), "Простое число");
+            });
+            it("передаем a = 1", function() {
+                assert.equal(isPrime(1), "Число должно быть больше 1");
+            });
+            it("передаем a = null", function() {
+                assert.equal(isPrime(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(isPrime(NaN), null);
+            });
+            it("передаем a = undefined", function() {
+                assert.equal(isPrime(""), null);
+            });
+            it("передаем a = 3.14", function() {
+                assert.equal(isPrime(3.14), " Число не целочисленное");
+            });
+        });
+        describe("getMathSqrt", function() {
+            it("передаем a = 9", function() {
+                assert.equal(getMathSqrt(9), 3);
+            });
+            it("передаем a = 5", function() {
+                assert.equal(getMathSqrt(5), 2);
+            });
+            it("передаем a = -5", function() {
+                assert.equal(getMathSqrt(-5), " Число меньше нуля");
+            });
+            it("передаем a = 2.15", function() {
+                assert.equal(getMathSqrt(2.15), " Число не целочисленное");
+            });
+            it("передаем a = null", function() {
+                assert.equal(getMathSqrt(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(getMathSqrt(NaN), null);
+            });
+            it("передаем a = undefined", function() {
+                assert.equal(getMathSqrt(""), null);
+            });
+        });
+        describe("factorial", function() {
+            it("передаем a = 5", function() {
+                assert.equal(factorial(5), 120);
+            });
+           
+            it("передаем a = -5", function() {
+                assert.equal(factorial(-5), " Число меньше нуля");
+            });
+            it("передаем a = 2.15", function() {
+                assert.equal(factorial(2.15), " Число не целочисленное");
+            });
+            it("передаем a = null", function() {
+                assert.equal(factorial(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(factorial(NaN), null);
+            });
+            it("передаем a = undefined", function() {
+                assert.equal(factorial(""), null);
+            });
+        });
+        describe("getSumNum", function() {
+            it("передаем a = 5", function() {
+                assert.equal(getSumNum(5), 15);
+            });
+           
+            it("передаем a = -5", function() {
+                assert.equal(getSumNum(-5), " Число меньше нуля");
+            });
+            it("передаем a = 2.15", function() {
+                assert.equal(getSumNum(2.15), " Число не целочисленное");
+            });
+            it("передаем a = null", function() {
+                assert.equal(getSumNum(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(getSumNum(NaN), null);
+            });
+            it("передаем a = undefined", function() {
+                assert.equal(getSumNum(""), null);
+            });
+        });
+        describe("reverse", function() {
+            it("передаем a = 123", function() {
+                assert.equal(reverse(123), 321);
+            });
+           
+            it("передаем a = -123", function() {
+                assert.equal(reverse(-123), -321);
+            });
+            it("передаем a = 2.15", function() {
+                assert.equal(reverse(2.15), " Число не целочисленное");
+            });
+            it("передаем a = null", function() {
+                assert.equal(reverse(null), null);
+            });
+
+            it("передаем a = NaN", function() {
+                assert.equal(reverse(NaN), null);
+            });
+            it("передаем a = undefined", function() {
+                assert.equal(reverse(""), null);
+            });
+        });
+    </script>
+    <!-- запустить тесты! -->
+    <script>
+        mocha.run();
+    </script>
+</body>
+
+</html>

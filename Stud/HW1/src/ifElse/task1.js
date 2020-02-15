@@ -1,7 +1,7 @@
 /* const a = 3;
 const b = 5; */
 function getMultEven(a, b) {
-    if ((a === null) || (a === NaN) || (a === undefined) || (b === null) || (b === NaN) || (b === undefined)) {
+    if ((a === null) || (isNaN(a)) || (a === undefined) || (b === null) || (isNaN(b)) || (b === undefined)) {
         return null;
     }
     let result = 0;

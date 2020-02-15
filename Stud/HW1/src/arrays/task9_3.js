@@ -1,6 +1,6 @@
 /* const array = [2, 79, 56, 45]; */
 const insertionSort = arr => {
-    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (arr === undefined)) {
+    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (isNaN(Array.isArray(arr)))) {
         return null;
     }
     for (let i = 1, l = arr.length; i < l; i++) {

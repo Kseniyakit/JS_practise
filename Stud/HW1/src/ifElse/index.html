@@ -97,6 +97,58 @@
                 assert.equal(arraySum(""), null);
             });
         });
+        describe("mathMax", function() {
+            it("передаем a = 3,10,7", function() {
+                assert.equal(mathMax(3,10,7), 213);
+            });
+
+            it("передаем a = null", function() {
+                assert.equal(mathMax(null), null);
+            });
+
+
+            it("передаем a = NaN", function() {
+                assert.equal(mathMax(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(mathMax(""), null);
+            });
+        });
+        describe("getMark", function() {
+            it("передаем a = 5", function() {
+                assert.equal(getMark(5), "F");
+            });
+            it("передаем a = 26", function() {
+                assert.equal(getMark(26), "E");
+            });
+            it("передаем a = 51", function() {
+                assert.equal(getMark(51), "D");
+            });
+            it("передаем a = 73", function() {
+                assert.equal(getMark(73), "C");
+            });
+            it("передаем a = 81", function() {
+                assert.equal(getMark(81), "B");
+            });
+            it("передаем a = 94", function() {
+                assert.equal(getMark(94), "A");
+            });
+            it("передаем a = null", function() {
+                assert.equal(getMark(null), null);
+            });
+
+
+            it("передаем a = NaN", function() {
+                assert.equal(getMark(NaN), null);
+            });
+
+
+            it("передаем a = undefined", function() {
+                assert.equal(getMark(""), null);
+            });
+        });
     </script>
     <!-- запустить тесты! -->
     <script>

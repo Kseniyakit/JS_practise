@@ -1,5 +1,5 @@
 function letterToNum(num) {
-    if ((num === null) || (num === NaN) || (num === undefined) || (num === "")) {
+    if ((num === null) || (isNaN(num))  || (num === undefined) || (num === "")) {
         return null;
     }
     const ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',

@@ -1,7 +1,7 @@
 const array = [2, 78, 56, 45];
 
 function getMinValue(arr) {
-    if (!Array.isArray(arr) || (arr === null) || (arr === undefined)) {
+    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (isNaN(Array.isArray(arr)))) {
         return null;
     }
 

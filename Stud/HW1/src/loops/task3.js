@@ -1,6 +1,18 @@
-let a = 10;
-for (let i = 1; i<a; i++ ){
-    if ( Number.isInteger(Math.sqrt(i))){
-        console.log((Math.sqrt(i)));
-        } else continue;
+function getMathSqrt(num){
+    if ((num=== null) || isNaN(num)|| (num === "")|| (num === undefined) ) {
+        return null;
+    }
+    if (num < 0) {
+        return " Число меньше нуля";
+    }
+    if (!Number.isInteger(num)) {
+        return " Число не целочисленное";
+    }
+for (let i = 0; i<10; i++ ){
+    if (num === i) {
+        return Math.round(Math.sqrt(num));
+    } 
+}
+    return "Число не натуральное";
+
 }

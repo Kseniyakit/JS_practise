@@ -32,7 +32,7 @@ var Small = {
 var a, n, g;
 
 function text2num(s) {
-    if ((s === null) || (s === NaN) || (s === undefined) || (s === "")) {
+    if ((s === null) || (typeof s === 'number') || (s === undefined) || (s === "")) {
         return null;
     }
     a = s.toString().split(' ');

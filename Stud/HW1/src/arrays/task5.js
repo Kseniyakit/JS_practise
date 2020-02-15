@@ -2,7 +2,7 @@
 
 function getOddNumbers(arr) {
     let oddNumbers = [];
-    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (arr === undefined)) {
+    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (isNaN(Array.isArray(arr)))) {
         return null;
     }
     for (let i = 0; i <= arr.length; i++) {

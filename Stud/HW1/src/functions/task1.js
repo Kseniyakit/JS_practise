@@ -1,5 +1,5 @@
 function getWeekDay(date) {
-    if ((date === null) || (date === NaN) || (date === undefined) || (date === "")) {
+    if ((date === null) || isNaN(date) || (date === undefined) || (date === "")) {
         return null;
     }
     let days = ['Вс', "Пн", "Вт", "Срд", "Чт", "Пт", "Сб"];

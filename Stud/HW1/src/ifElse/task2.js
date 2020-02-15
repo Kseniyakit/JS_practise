@@ -2,7 +2,7 @@
 const y = 6; */
 
 function getNumQuarter(x, y) {
-    if ((x === null) || (x === NaN) || (x === undefined) || (y === null) || (y === NaN) || (y === undefined)) {
+    if ((x === null) || (isNaN(x)) || (x === undefined) || (y === null) || (isNaN(y)) || (y === undefined)) {
         return null;
     }
     if ((x > 0) && (y > 0)) {

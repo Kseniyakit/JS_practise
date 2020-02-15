@@ -1,7 +1,7 @@
 /* const array = [2, 79, 56, 45]; */
 
 function getOddCount(arr) {
-    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (arr === undefined)) {
+    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (isNaN(Array.isArray(arr)))) {
         return null;
     }
     let count = 0;

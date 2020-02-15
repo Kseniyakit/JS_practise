@@ -1,7 +1,7 @@
 //Heap
 /* let arr = [1, 3, 9, 56, 560, 506, 45, 13, 28, 22]; */
 const heapSort = (arr) => {
-    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (arr === undefined)) {
+    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (isNaN(Array.isArray(arr)))) {
         return null;
     }
     createMaxHeap(arr);

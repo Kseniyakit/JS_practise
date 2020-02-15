@@ -1,7 +1,7 @@
 /* const array = [2, 78, 56, 45]; */
 
 function getMaxValue(arr) {
-    if (!Array.isArray(arr) || (arr === null) || (arr === undefined)) {
+    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (isNaN(Array.isArray(arr)))) {
         return null;
     }
     let max = arr[0];

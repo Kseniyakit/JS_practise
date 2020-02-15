@@ -1,7 +1,7 @@
 /* const array = [22, 78, 2, 45]; */
 
 function getIndexValue(arr) {
-    if (!Array.isArray(arr) || (arr === null) || (arr === undefined)) {
+    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (isNaN(Array.isArray(arr)))) {
         return null;
     }
     let min = arr[0];

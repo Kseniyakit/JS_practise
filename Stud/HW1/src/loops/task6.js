@@ -1,13 +1,20 @@
-var num = 564;
 
-function getReversedNum(num) {
-  let result = 0;
-  while (num) {
-    result = result * 10 + num % 10;
-    num = Math.floor(num / 10);
-  }
 
-  return result;
+function reverse (n) {
+  if ((n=== null) || isNaN(n)|| (n === "")|| (n === undefined) ) {
+    return null;
 }
-
-console.log(getReversedNum(num));
+if (!Number.isInteger(n)) {
+  return " Число не целочисленное";
+}
+  let reversed = 0;
+ 
+  while (n != 0) {
+   reversed *= 10;
+   reversed += n % 10;
+   n -= n % 10;
+   n /= 10;
+  }
+ 
+  return reversed;
+ }

@@ -28,7 +28,7 @@ function partition(items, left, right) {
 }
 
 function quickSort(items, left, right) {
-    if (!Array.isArray(items) || (items === null) || (items === undefined) || (items === undefined)) {
+    if (!Array.isArray(items) || (items === null) || (items === undefined) || (isNaN(Array.isArray(items)))) {
         return null;
     }
     let index;

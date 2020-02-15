@@ -1,6 +1,6 @@
 /* let arr = [-1,4,5]; */
 function arraySum(array) {
-    if (!Array.isArray(array) || (array === null) || (array === undefined)) {
+    if (!Array.isArray(array) || (array === null) || (array === undefined) || isNaN(Array.isArray(array)) ) {
         return null;
     }
     let sum = 0;

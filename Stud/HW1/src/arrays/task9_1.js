@@ -1,6 +1,6 @@
 /* const array = [2, 79, 56, 45]; */
 const bubbleSort = arr => {
-    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (arr === undefined)) {
+    if (!Array.isArray(arr) || (arr === null) || (arr === undefined) || (isNaN(Array.isArray(arr)))) {
         return null;
     }
     for (let i = 0, endI = arr.length - 1; i < endI; i++) {
