@@ -33,129 +33,129 @@
     <!-- в элементе с id="mocha" будут результаты тестов -->
     <div id="mocha"></div>
     <script>
-        function subs(a, b) {
-            if ((typeof a === "number") && (typeof b === "number")) return a - b;
-            return null;
-        }
-        describe("Substraction", function() {
-            describe("", function() {
-                function makeTest(a, b) {
-                    let expected = a - b;
-                    it(`${a} - ${b} = ${expected}`, function() {
-                        assert.equal(subs(a, b), expected);
-                    });
-                }
-
-                for (let a = 0; a <= 5; a++) {
-                    for (let b = 0; b <= 5; b++) {
-                        makeTest(a, b);
-                    }
-                }
-                it("a=2,b=undefined; expected null", function() {
-                    assert.equal(subs(2, undefined), null);
-                });
-                it("'a=.',b=2; expected null", function() {
-                    assert.equal(subs('.', 2), null);
-                });
-                it("a=null,b=2; expected null", function() {
-                    assert.equal(subs(null, 2), null);
-                });
+                                                                   
+        describe("function summ", function() {
+            it("a=20,b=44; expected 64", function() {
+                assert.equal(Summ(20, 44), 64);
             });
-
+            it("a=1.4,b=2.5; expected 3.9", function() {
+                assert.equal(Summ(1.4, 2.5), 3.9);
+            });
+            it("a=0,b=0; expected 0", function() {
+                assert.equal(Summ(0, 0), 0);
+            });
+            it("a=-10,b=40; expected 30", function() {
+                assert.equal(Summ(-10, 40), 30);
+            });
+            it("a=.,b=40; expected 'не число'", function() {
+                assert.equal(Summ('.', 40), 'не число');
+            });
+            it("a=null,b=40; expected 'не число'", function() {
+                assert.equal(Summ(null, 40), 'не число');
+            });
+            it("a=NaN,b=40; expected 'не число'", function() {
+                assert.deepEqual(Summ(NaN, 40), NaN);
+            });
+            it("a=null,b=40; expected 'не число'", function() {
+                assert.equal(Summ(undefined, 40), 'не число');
+            });
         });
 
-        function divide(a, b) {
-            if ((typeof a === "number") && (typeof b === "number")) return a / b;
-            return null;
-        }
-        describe("Division", function() {
-            describe("", function() {
-                function makeTest(a, b) {
-                    let expected = a / b;
-                    it(`${a} / ${b} = ${expected}`, function() {
-                        assert.equal(divide(a, b), expected);
-                    });
-                }
-
-                for (let a = 1; a <= 5; a++) {
-                    for (let b = 0; b <= 5; b++) {
-                        makeTest(a, b);
-                    }
-                }
+        describe("function minus", function() {
+it("a=50,b=33; expected '17'", function() {
+                assert.equal(minus(50, 33), 17);
             });
-            it("a=2,b=undefined; expected null", function() {
-                assert.equal(divide(2, undefined), null);
+            it("a=10,b=40; expected '-10'", function() {
+                assert.equal(minus(10, 40), -30);
             });
-            it("'a=.',b=2; expected null", function() {
-                assert.equal(divide('.', 2), null);
+            it("a=-5,b=-6; expected '-11'", function() {
+                assert.equal(minus(-5, -6), 1);
             });
-            it("a=null,b=2; expected null", function() {
-                assert.equal(divide(null, 2), null);
+            it("a=0,b=-6; expected '50'", function() {
+                assert.equal(minus(0, 50), -50);
             });
-
+            it("a=0.785,b=0.65798; expected '0.12702'", function() {
+                assert.equal(minus(0.785, 0.65798), 0.12702);
+            });
+                 it("a=.,b=40; expected 'не число'", function() {
+                assert.equal(minus('.', 40), 'не число');
+            });
+            it("a=null,b=40; expected 'не число'", function() {
+                assert.equal(minus(null, 40), 'не число');
+            });
+            it("a=NaN,b=40; expected 'не число'", function() {
+                assert.deepEqual(minus(NaN, 40), NaN);
+            });
+            it("a=null,b=40; expected 'не число'", function() {
+                assert.equal(minus(undefined, 40), 'не число');
+            });
+            
         });
 
-        function mult(a, b) {
-            if ((typeof a === "number") && (typeof b === "number")) return a * b;
-            return null;
-        }
-        describe("Multiplication", function() {
-            describe("", function() {
-                function makeTest(a, b) {
-                    let expected = a * b;
-                    it(`${a} * ${b} = ${expected}`, function() {
-                        assert.equal(mult(a, b), expected);
-                    });
-                }
-
-                for (let a = 0; a <= 5; a++) {
-                    for (let b = 0; b <= 5; b++) {
-                        makeTest(a, b);
-                    }
-                }
-                it("a=2,b=undefined; expected null", function() {
-                    assert.equal(mult(2, undefined), null);
-                });
-                it("'a=.',b=2; expected null", function() {
-                    assert.equal(mult('.', 2), null);
-                });
-                it("a=null,b=2; expected null", function() {
-                    assert.equal(mult(null, 2), null);
-                });
+        describe("function multiply", function() {
+ it("a=10,b=40; expected '400'", function() {
+                assert.equal(multiply(10, 40), 400);
             });
-
+it("a=3,b=-4; expected '-12'", function() {
+                assert.equal(multiply(3, -4), -12);
+            });
+            it("a=-3,b=-4; expected '12'", function() {
+                assert.equal(multiply(-3, -4), 12);
+            });
+            it("a=3,b=0; expected '0'", function() {
+                assert.equal(multiply(3, 0), 0);
+            });
+              it("a=0.3,b=10; expected '3'", function() {
+                assert.equal(multiply(0.3, 10), 3);
+            });
+        it("a=.,b=40; expected 'не число'", function() {
+                assert.equal(multiply('.', 40), 'не число');
+            });
+            it("a=null,b=40; expected 'не число'", function() {
+                assert.equal(multiply(null, 40), 'не число');
+            });
+            it("a=NaN,b=40; expected 'не число'", function() {
+                assert.deepEqual(multiply(NaN, 40), NaN);
+            });
+            it("a=null,b=40; expected 'не число'", function() {
+                assert.equal(multiply(undefined, 40), 'не число');
+            });
         });
 
-        function sum(a, b) {
-            if ((typeof a === "number") && (typeof b === "number")) return a + b;
-            return null;
-        }
-        describe("Sum", function() {
-            describe("", function() {
-                function makeTest(a, b) {
-                    let expected = a + b;
-                    it(`${a} + ${b} = ${expected}`, function() {
-                        assert.equal(sum(a, b), expected);
-                    });
-                }
+        describe("function divisions", function() {
 
-                for (let a = 0; a <= 5; a++) {
-                    for (let b = 0; b <= 5; b++) {
-                        makeTest(a, b);
-                    }
-                }
-                it("a=2,b=undefined; expected null", function() {
-                    assert.equal(sum(2, undefined), null);
-                });
-                it("'a=.',b=2; expected null", function() {
-                    assert.equal(sum('.', 2), null);
-                });
-                it("a=null,b=2; expected null", function() {
-                    assert.equal(sum(null, 2), null);
-                });
+it("a=10,b=5; expected '2'", function() {
+                assert.equal(divide(10, 5), 2);
             });
-
+            it("a=30,b=50; expected '0.6'", function() {
+                assert.equal(divide(30, 50), 0.6);
+            });
+             it("a=3.777,b=5.6789; expected '0.66509359'", function() {
+                assert.equal(divide(3.777, 5.6789), 0.6650935);
+            });
+             it("a=80,b=-2; expected '-40'", function() {
+                assert.equal(divide(80, -2), -40);
+            });
+             it("a=0,b=-2; expected '-0'", function() {
+                assert.equal(divide(0, -2), 0);
+            });
+             it("a=5,b=0; expected '-0'", function() {
+                assert.equal(divide(5, 0), 0);
+            });
+              it("a=.,b=40; expected 'не число'", function() {
+                assert.equal(divide('.', 40), 'не число');
+            });
+            it("a=null,b=40; expected 'не число'", function() {
+                assert.equal(divide(null, 40), 'не число');
+            });
+            it("a=NaN,b=40; expected 'не число'", function() {
+                assert.deepEqual(divide(NaN, 40), NaN);
+            });
+            it("a=null,b=40; expected 'не число'", function() {
+                assert.equal(divide(undefined, 40), 'не число');
+            });
         });
+       
     </script>
     <!-- запустить тесты! -->
     <script>
