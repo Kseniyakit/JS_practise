@@ -22,7 +22,7 @@
     </script>
     <script src="./index.js">
     </script>
-    
+
 
 
     <title>Document</title>
@@ -33,130 +33,129 @@
     <!-- в элементе с id="mocha" будут результаты тестов -->
     <div id="mocha"></div>
     <script>
- function diff(a,b){
-    if((typeof a==="number")&&(typeof b==="number"))return a-b;
-    return null;
-}
-describe("minus", function() {
-    describe("", function() {
-        function makeTest(a,b) {
-            let expected = a-b;
-            it(`${a} - ${b} = ${expected}`, function() {
-                assert.equal(diff(a,b), expected);
+        function subs(a, b) {
+            if ((typeof a === "number") && (typeof b === "number")) return a - b;
+            return null;
+        }
+        describe("Substraction", function() {
+            describe("", function() {
+                function makeTest(a, b) {
+                    let expected = a - b;
+                    it(`${a} - ${b} = ${expected}`, function() {
+                        assert.equal(subs(a, b), expected);
+                    });
+                }
+
+                for (let a = 0; a <= 5; a++) {
+                    for (let b = 0; b <= 5; b++) {
+                        makeTest(a, b);
+                    }
+                }
+                it("a=2,b=undefined; expected null", function() {
+                    assert.equal(subs(2, undefined), null);
+                });
+                it("'a=.',b=2; expected null", function() {
+                    assert.equal(subs('.', 2), null);
+                });
+                it("a=null,b=2; expected null", function() {
+                    assert.equal(subs(null, 2), null);
+                });
             });
+
+        });
+
+        function divide(a, b) {
+            if ((typeof a === "number") && (typeof b === "number")) return a / b;
+            return null;
         }
-  
-        for (let a = 0; a <= 3; a++) {
-            for (let b = 0; b <= 3; b++){
-                makeTest(a,b);
-            }
-        }
-    });
-  /*   describe("проверка типов не number(возвращает null) ", function() {
-        it("a=2,b=undefined; expected null", function() {
-            assert.equal(diff(2,undefined),null);
-        });
-        it("'a=.',b=2; expected null", function() {
-            assert.equal(diff('.',2),null);
-        });
-        it("a=null,b=2; expected null", function() {
-            assert.equal(diff(null,2),null);
-        });
-    }); */
-});
-function fract(a,b){
-    if((typeof a===typeof 1)&&(typeof b===typeof 1))return a/b;
-    return null;
-}
-describe("деление", function() {
-    describe("проверка деления", function() {
-        function makeTest(a,b) {
-            let expected = a/b;
-            it(`${a} / ${b} = ${expected}`, function() {
-                assert.equal(fract(a,b), expected);
+        describe("Division", function() {
+            describe("", function() {
+                function makeTest(a, b) {
+                    let expected = a / b;
+                    it(`${a} / ${b} = ${expected}`, function() {
+                        assert.equal(divide(a, b), expected);
+                    });
+                }
+
+                for (let a = 1; a <= 5; a++) {
+                    for (let b = 0; b <= 5; b++) {
+                        makeTest(a, b);
+                    }
+                }
             });
-        }
-  
-        for (let a = 1; a <= 4; a++) {
-            for (let b = 0; b <= 3; b++){
-                makeTest(a,b);
-            }
-        }
-    });
-    describe("проверка типов не number(возвращает null) ", function() {
-        it("a=2,b=undefined; expected null", function() {
-            assert.equal(fract(2,undefined),null);
-        });
-        it("'a=.',b=2; expected null", function() {
-            assert.equal(fract('.',2),null);
-        });
-        it("a=null,b=2; expected null", function() {
-            assert.equal(fract(null,2),null);
-        });
-    });
-});
-function multi(a,b){
-    if((typeof a===typeof 1)&&(typeof b===typeof 1))return a*b;
-    return null;
-}
-describe("произведение", function() {
-    describe("проверка умножения", function() {
-        function makeTest(a,b) {
-            let expected = a*b;
-            it(`${a} * ${b} = ${expected}`, function() {
-                assert.equal(multi(a,b), expected);
+            it("a=2,b=undefined; expected null", function() {
+                assert.equal(divide(2, undefined), null);
             });
-        }
-  
-        for (let a = 0; a <= 3; a++) {
-            for (let b = 0; b <= 3; b++){
-                makeTest(a,b);
-            }
-        }
-    });
-    describe("проверка типов не number (возвращает null) ", function() {
-        it("a=2,b=undefined; expected null", function() {
-            assert.equal(multi(2,undefined),null);
-        });
-        it("'a=.',b=2; expected null", function() {
-            assert.equal(multi('.',2),null);
-        });
-        it("a=null,b=2; expected null", function() {
-            assert.equal(multi(null,2),null);
-        });
-    });
-});
-function suma(a,b){
-    if((typeof a===typeof 1)&&(typeof b===typeof 1))return a+b;
-    return null;
-}
-describe("сумма", function() {
-    describe("проверка додавания", function() {
-        function makeTest(a,b) {
-            let expected = a+b;
-            it(`${a} + ${b} = ${expected}`, function() {
-                assert.equal(suma(a,b), expected);
+            it("'a=.',b=2; expected null", function() {
+                assert.equal(divide('.', 2), null);
             });
+            it("a=null,b=2; expected null", function() {
+                assert.equal(divide(null, 2), null);
+            });
+
+        });
+
+        function mult(a, b) {
+            if ((typeof a === "number") && (typeof b === "number")) return a * b;
+            return null;
         }
-  
-        for (let a = 0; a <= 3; a++) {
-            for (let b = 0; b <= 3; b++){
-                makeTest(a,b);
-            }
+        describe("Multiplication", function() {
+            describe("", function() {
+                function makeTest(a, b) {
+                    let expected = a * b;
+                    it(`${a} * ${b} = ${expected}`, function() {
+                        assert.equal(mult(a, b), expected);
+                    });
+                }
+
+                for (let a = 0; a <= 5; a++) {
+                    for (let b = 0; b <= 5; b++) {
+                        makeTest(a, b);
+                    }
+                }
+                it("a=2,b=undefined; expected null", function() {
+                    assert.equal(mult(2, undefined), null);
+                });
+                it("'a=.',b=2; expected null", function() {
+                    assert.equal(mult('.', 2), null);
+                });
+                it("a=null,b=2; expected null", function() {
+                    assert.equal(mult(null, 2), null);
+                });
+            });
+
+        });
+
+        function sum(a, b) {
+            if ((typeof a === "number") && (typeof b === "number")) return a + b;
+            return null;
         }
-    });
-    describe("проверка типов не number(возвращает null) ", function() {
-        it("a=2,b=undefined; expected null", function() {
-            assert.equal(suma(2,undefined),null);
+        describe("Sum", function() {
+            describe("", function() {
+                function makeTest(a, b) {
+                    let expected = a + b;
+                    it(`${a} + ${b} = ${expected}`, function() {
+                        assert.equal(sum(a, b), expected);
+                    });
+                }
+
+                for (let a = 0; a <= 5; a++) {
+                    for (let b = 0; b <= 5; b++) {
+                        makeTest(a, b);
+                    }
+                }
+                it("a=2,b=undefined; expected null", function() {
+                    assert.equal(sum(2, undefined), null);
+                });
+                it("'a=.',b=2; expected null", function() {
+                    assert.equal(sum('.', 2), null);
+                });
+                it("a=null,b=2; expected null", function() {
+                    assert.equal(sum(null, 2), null);
+                });
+            });
+
         });
-        it("'a=.',b=2; expected null", function() {
-            assert.equal(suma('.',2),null);
-        });
-        it("a=null,b=2; expected null", function() {
-            assert.equal(suma(null,2),null);
-        });
-    });
-});
     </script>
     <!-- запустить тесты! -->
     <script>
