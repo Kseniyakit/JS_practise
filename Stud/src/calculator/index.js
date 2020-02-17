@@ -3,9 +3,7 @@
 });
 let textArea = document.getElementById('calc-display-val');
 let val = textArea.value;
-if (val === Infinity){
-	 textArea.innerHTML = "";
-}
+
  
 function onButtonClick(e){
 
