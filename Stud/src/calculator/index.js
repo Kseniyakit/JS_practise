@@ -251,14 +251,15 @@ function divide(a, b) {
     } else {
 
         a /= b;
+        let n = a.toFixed(2);
 
-        let d = String(a);
+        let d = String(n);
 
-        a = cutDisplay(d);
+        n = cutDisplay(d);
 
-        a = parseFloat(a);
+        n = parseFloat(n);
 
-        return a;
+        return n;
 
     }
 
@@ -281,14 +282,15 @@ function multiply(a, b) {
     } else {
 
         a *= b;
+        let n = a.toFixed(2);
 
-        let d = String(a);
+        let d = String(n);
 
-        a = cutDisplay(d);
+        n = cutDisplay(d);
 
-        a = parseFloat(a);
+        n = parseFloat(n);
 
-        return a;
+        return n;
 
     }
 
