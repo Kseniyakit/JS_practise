@@ -66,10 +66,13 @@
          let ag = document.querySelector('.age' + id);
          let firstName = document.getElementById("firstName").value;
          let lastName = document.getElementById("lastName").value;
-         let age = document.getElementById("lastName").value;
+         let age = +document.getElementById("age").value;
          fname.innerHTML = firstName;
          sname.innerHTML = lastName;
-         ag.innerHTML = age;
+         if (typeof(age) !== 'number' || age === undefined || isNaN(age)) {
+             age === null;
+             alert('Age is not a number');
+         } else ag.innerHTML = age;
 
      }
  }
