@@ -9,6 +9,7 @@
          alert('ID is not a number');
      }
      if (idArr.indexOf(id) != -1) {
+         alert('Try another ID');
          return;
      } else idArr.push(id);
      console.log(idArr);
