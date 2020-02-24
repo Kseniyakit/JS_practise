@@ -39,119 +39,113 @@
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.addStart(5), [5, 5, 2, 9, 4]);
+                assert.deepEqual(aList1.addStart(5), [5, 5, 2, 9, 4]);
             });
         });
         describe(".addEnd", function() {
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.addEnd(0), [5, 5, 2, 9, 4, 0]);
+                assert.deepEqual(aList2.addEnd(0), [5, 2, 9, 4, 0]);
             });
         });
         describe(".delStart", function() {
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.delStart(), 5);
+                assert.deepEqual(aList3.delStart(), 5);
             });
         });
         describe(".delEnd", function() {
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.delEnd(), 4);
+                assert.deepEqual(aList4.delEnd(), 4);
             });
         });
         describe(".delPosition", function() {
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.delPosition(2), 9);
+                assert.deepEqual(aList5.delPosition(2), 9);
             });
         });
         describe(".get", function() {
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.get(1), 2);
+                assert.deepEqual(aList6.get(1), 2);
             });
         });
         describe(".set", function() {
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.set(1, 7), [5, 7, 2]);
+                assert.deepEqual(aList7.set(1, 7), [5, 7, 2, 9, 4]);
             });
         });
         describe(".toString", function() {
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.toString(), " 5 7 2");
+                assert.deepEqual(aList8.toString(), " 5 2 9 4");
             });
         });
         describe(".clear", function() {
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.clear(), [5, 2, 9, 4]);
+                assert.deepEqual(aList8.clear(), [5, 2, 9, 4]);
             });
         });
         describe(".min", function() {
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.min(), 2);
+                assert.deepEqual(aList9.min(), 2);
             });
         });
         describe(".max", function() {
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.max(), 9);
+                assert.deepEqual(aList10.max(), 9);
             });
         });
         describe(".sort", function() {
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.sort(), [2, 4, 5, 9]);
+                assert.deepEqual(aList11.sort(), [2, 4, 5, 9]);
             });
         });
         describe(".maxIndex", function() {
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.maxIndex(), 3);
+                assert.deepEqual(aList12.maxIndex(), 2);
             });
         });
-        describe(".maxIndex", function() {
 
-            it("Пердаем массив:[5, 2, 9, 4]", function() {
-
-                assert.deepEqual(aList.maxIndex(), 3);
-            });
-        });
         describe(".minIndex", function() {
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.minIndex(), 0);
+                assert.deepEqual(aList13.minIndex(), 1);
             });
         });
         describe(".reverse", function() {
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.reverse(), [9, 5, 4, 2]);
+                assert.deepEqual(aList14.reverse(), [4, 9, 2, 5]);
             });
         });
         describe(".halfreverse", function() {
 
             it("Пердаем массив:[5, 2, 9, 4]", function() {
 
-                assert.deepEqual(aList.halfreverse(), [2, 4, 5, 9]);
+                assert.deepEqual(aList15.halfreverse(), [9, 4, 5, 2]);
             });
         });
     </script>

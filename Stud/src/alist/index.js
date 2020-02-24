@@ -165,22 +165,20 @@ AList.prototype.sort = function() {
     return this.arr;
 }
 AList.prototype.maxIndex = function() {
-    if (!Array.isArray(this.arr) || (this.arr === null) || (this.arr === undefined) || (isNaN(Array.isArray(this.arr)))) {
-        return null;
-    }
-
-    let index;
-
-    let max = this.arr[0];
-
     for (let i = 0; i < this.size(); i++) {
-        if (max <= this.arr[i]) {
-            max = this.arr[i];
-            index = i;
+
+        let count = i;
+
+        for (let j = i + 1; j < this.size(); j++) {
+
+            if (this.arr[i] > this.arr[j]) count++;
+
         }
+
+        if (count == this.size() - 1) return i;
+
     }
 
-    return index;
 }
 AList.prototype.minIndex = function() {
     if (!Array.isArray(this.arr) || (this.arr === null) || (this.arr === undefined) || (isNaN(Array.isArray(this.arr)))) {
@@ -214,21 +212,72 @@ AList.prototype.reverse = function() {
     return this.arr;
 }
 AList.prototype.halfreverse = function() {
-    let left = null;
-    let right = null;
-    let length = this.size();
-    for (left = 0; left < this.size() / 2; left += 1) {
-        right = length - 1 - left;
-        var temporary = this.arr[left];
-        this.arr[left] = this.arr[right];
-        this.arr[right] = temporary;
+
+    let len = this.size();
+
+    const halfLen = parseInt(len / 2);
+
+    let helpArr = [];
+
+    if (this.size() % 2 == 0) {
+
+        for (let i = 0, j = halfLen; i < halfLen && j < len; i++, j++) {
+
+            helpArr[i] = this.arr[j];
+
+            this.arr[j] = this.arr[i];
+
+            this.arr[i] = helpArr[i];
+
+        };
+
+    } else {
+
+        for (let i = 0, j = halfLen + 1; i < halfLen + 1 && j < len; i++, j++) {
+
+            helpArr[i] = this.arr[j];
+
+            this.arr[j] = this.arr[i];
+
+            this.arr[i] = helpArr[i];
+
+        };
+
     }
+
     return this.arr;
+    /*  let left = null;
+     let right = null;
+     let length = this.size();
+     for (left = 0; left < this.size() / 2; left++) {
+         right = length - 1 - left;
+         var temporary = this.arr[left];
+         this.arr[left] = this.arr[right];
+         this.arr[right] = temporary;
+     }
+     return this.arr; */
+
+
 }
 
 
 let aList = new AList([5, 2, 9, 4]);
 
+let aList1 = new AList([5, 2, 9, 4]);
+let aList2 = new AList([5, 2, 9, 4]);
+let aList3 = new AList([5, 2, 9, 4]);
+let aList4 = new AList([5, 2, 9, 4]);
+let aList5 = new AList([5, 2, 9, 4]);
+let aList6 = new AList([5, 2, 9, 4]);
+let aList7 = new AList([5, 2, 9, 4]);
+let aList8 = new AList([5, 2, 9, 4]);
+let aList9 = new AList([5, 2, 9, 4]);
+let aList10 = new AList([5, 2, 9, 4]);
+let aList11 = new AList([5, 2, 9, 4]);
+let aList12 = new AList([5, 2, 9, 4]);
+let aList13 = new AList([5, 2, 9, 4]);
+let aList14 = new AList([5, 2, 9, 4]);
+let aList15 = new AList([5, 2, 9, 4]);
 /* console.log(aList.defaultArray);
 console.log(aList.init());
 console.log(aList.size());
