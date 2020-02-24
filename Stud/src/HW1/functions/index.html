@@ -40,7 +40,7 @@
     <script>
         describe("getWeekDay", function() {
             it("передаем a = new Date()", function() {
-                assert.equal(getWeekDay(new Date()), "Сб");
+                assert.equal(getWeekDay(new Date("February 24, 2020 23:15:00")), "Пн");
             });
 
             it("передаем a = null", function() {
