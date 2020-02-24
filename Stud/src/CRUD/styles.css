@@ -1,11 +1,14 @@
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 .inputs {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
+    width: 60%;
+    margin: 100px auto 0;
 }
 
 input[type=text],
@@ -33,19 +36,23 @@ input[type=button] {
     font-size: 18px;
 }
 
+input[type=button]:hover {
+    background-color: orange;
+}
+
 .buttons {
-    width: 100%;
-    margin: 8px 0;
+    width: 60%;
     padding: 12px 20px;
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: center;
+    margin: 8px auto;
 }
 
 .row {
-    width: 100%;
+    width: 60%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 8px auto;
     display: flex;
     justify-content: space-around;
     border: 1px solid #ccc;

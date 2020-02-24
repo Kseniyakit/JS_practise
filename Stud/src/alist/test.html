@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- подключаем стили Mocha, для отображения результатов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <!-- подключаем библиотеку Mocha -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+    <script>
+        mocha.setup('bdd');
+    </script>
+
+    <!-- подключаем chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <!-- в chai есть много всего, выносим assert в глобальную область -->
+    <script>
+        var assert = chai.assert;
+    </script>
+    <script src="./index.js">
+    </script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- в элементе с id="mocha" будут результаты тестов -->
+    <div id="mocha"></div>
+    <script>
+        describe(".size", function() {
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+                assert.deepEqual(aList.size(), 4);
+            });
+        });
+        describe(".addStart", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.addStart(5), [5, 5, 2, 9, 4]);
+            });
+        });
+        describe(".addEnd", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.addEnd(0), [5, 5, 2, 9, 4, 0]);
+            });
+        });
+        describe(".delStart", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.delStart(), 5);
+            });
+        });
+        describe(".delEnd", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.delEnd(), 4);
+            });
+        });
+        describe(".delPosition", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.delPosition(2), 9);
+            });
+        });
+        describe(".get", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.get(1), 2);
+            });
+        });
+        describe(".set", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.set(1, 7), [5, 7, 2]);
+            });
+        });
+        describe(".toString", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.toString(), " 5 7 2");
+            });
+        });
+        describe(".clear", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.clear(), [5, 2, 9, 4]);
+            });
+        });
+        describe(".min", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.min(), 2);
+            });
+        });
+        describe(".max", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.max(), 9);
+            });
+        });
+        describe(".sort", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.sort(), [2, 4, 5, 9]);
+            });
+        });
+        describe(".maxIndex", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.maxIndex(), 3);
+            });
+        });
+        describe(".maxIndex", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.maxIndex(), 3);
+            });
+        });
+        describe(".minIndex", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.minIndex(), 0);
+            });
+        });
+        describe(".reverse", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.reverse(), [9, 5, 4, 2]);
+            });
+        });
+        describe(".halfreverse", function() {
+
+            it("Пердаем массив:[5, 2, 9, 4]", function() {
+
+                assert.deepEqual(aList.halfreverse(), [2, 4, 5, 9]);
+            });
+        });
+    </script>
+    <!-- запустить тесты! -->
+    <script>
+        mocha.run();
+    </script>
+</body>
+
+</html>
