@@ -1,6 +1,6 @@
  let create = document.getElementById('create');
  create.addEventListener('click', createList);
-
+ let idArr = [];
  let count = 0;
 
  function createList() {
@@ -8,6 +8,10 @@
      if (typeof(id) !== 'number' || id === undefined || isNaN(id)) {
          alert('ID is not a number');
      }
+     if (idArr.indexOf(id) != -1) {
+         return;
+     } else idArr.push(id);
+     console.log(idArr);
      let firstName = document.getElementById("firstName").value;
      let lastName = document.getElementById("lastName").value
      let age = +document.getElementById("age").value;
@@ -25,7 +29,7 @@
      } else table[0].append(div);
      table += div;
 
-     div.id += count;
+     div.id = id;
      let div1 = document.createElement('div');
      div1.innerHTML = div.id;
      let div2 = document.createElement('div');
