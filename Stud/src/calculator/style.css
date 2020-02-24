@@ -38,7 +38,7 @@ body {
     border-right: 1px solid gray;
     border-top: 1px solid gray;
     border-radius: 7px 7px 0 0;
-    font-size: 80px;
+    font-size: 70px;
     background-color: #383838;
     overflow: hidden;
     white-space: no-wrap;
@@ -92,6 +92,7 @@ body {
 
 .black {
     background-color: #3f4143;
+    flex: 3.3;
 }
 
 #equally {

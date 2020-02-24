@@ -251,13 +251,13 @@ function divide(a, b) {
     } else {
 
         a /= b;
-        let n = a.toFixed(2);
 
-        let d = String(n);
+
+        let d = String(a);
 
         n = cutDisplay(d);
 
-        n = parseFloat(n);
+        n = parseFloat(n).toFixed(2);
 
         return n;
 
@@ -390,9 +390,9 @@ ressultBtn.addEventListener('click', function() {
 
 function cutDisplay(a) {
 
-    if (a.length > 9) {
+    if (a.length > 10) {
 
-        a = a.slice(0, 9);
+        a = a.slice(0, 10);
 
     }
 
