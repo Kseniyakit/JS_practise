@@ -4,16 +4,27 @@
  let count = 0;
 
  function createList() {
-     let id = document.getElementById("id").value;
+     let id = +document.getElementById("id").value;
+     if (typeof(id) !== 'number' || id === undefined || isNaN(id)) {
+         alert('ID is not a number');
+     }
      let firstName = document.getElementById("firstName").value;
      let lastName = document.getElementById("lastName").value
      let age = +document.getElementById("age").value;
+     if (typeof(age) !== 'number' || age === undefined || isNaN(age)) {
+         alert('Age is not a number');
+     }
      let table = document.getElementsByClassName('table');
      let div = document.createElement('div');
      div.classList.add("row");
      count += 1;
-     table[0].append(div);
+
+     if (typeof(age) !== 'number' || age === undefined || isNaN(age) || typeof(id) !== 'number' || id === undefined || isNaN(id)) {
+         return;
+
+     } else table[0].append(div);
      table += div;
+
      div.id += count;
      let div1 = document.createElement('div');
      div1.innerHTML = div.id;
