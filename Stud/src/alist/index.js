@@ -28,20 +28,18 @@ AList.prototype.addStart = function(element) {
 
     for (let i = 0; i < this.size(); i++) {
 
-
-
         el[i + 1] = this.arr[i];
 
     }
 
     this.arr = el;
 
-    return this.arr;
+    return this.size();
 };
 
 AList.prototype.addEnd = function(element) {
     this.arr[this.size()] = element;
-    return this.arr;
+    return this.size();
 };
 
 AList.prototype.delStart = function() {
@@ -85,28 +83,32 @@ AList.prototype.delPosition = function(index) {
 };
 
 AList.prototype.get = function(index) {
+    let get;
     for (let i = 0; i < this.size(); i++) {
         if (i == index) {
-            return this.arr[i];
+            get = this.arr[i];
+            return get;
         }
 
     }
 
 };
 
-AList.prototype.set = function(index, element) {
-    let copyArray = [];
-    let j = 0;
-    for (let i = 0; i < this.size() + 1; i++) {
-        if (i === index) {
-            copyArray[i] = element;
+AList.prototype.set = function(index, value) {
+    let put = [];
+    if (index > this.size()) {
+        return;
+    }
+    for (let i = 0; i < this.size(); i++) {
+        if (i == index) {
+            put[i] = value;
         } else {
-            copyArray[i] = this.arr[j];
-            j++;
+            put[i] = this.arr[i];
         }
     }
-    this.arr = copyArray;
-    return this.arr;
+    this.arr = put;
+    /*  return this.arr; */
+
 };
 
 AList.prototype.toString = function() {
@@ -119,12 +121,8 @@ AList.prototype.toString = function() {
     return toString;
 };
 AList.prototype.clear = function() {
-    let i = 0;
-    while (this.defaultArray[i]) {
-        this.arr[i] = this.defaultArray[i];
-        i++;
-    }
-    return this.arr;
+
+    return this.init();
 
 };
 AList.prototype.min = function() {
@@ -162,7 +160,7 @@ AList.prototype.sort = function() {
             }
         }
     }
-    return this.arr;
+
 }
 AList.prototype.maxIndex = function() {
     for (let i = 0; i < this.size(); i++) {
@@ -209,53 +207,87 @@ AList.prototype.reverse = function() {
         count--;
     };
     this.arr = arr1;
-    return this.arr;
+
 }
-AList.prototype.halfreverse = function() {
+AList.prototype.halfR = function() {
+    let a = [];
 
-    let len = this.size();
+    let j = 0;
 
-    const halfLen = parseInt(len / 2);
+    let l = this.size() - 1;
 
-    let helpArr = [];
 
-    if (this.size() % 2 == 0) {
 
-        for (let i = 0, j = halfLen; i < halfLen && j < len; i++, j++) {
+    if (this.size() % 2 === 0) {
 
-            helpArr[i] = this.arr[j];
+        let half = this.size() / 2;
 
-            this.arr[j] = this.arr[i];
+        let k = half - 1;
 
-            this.arr[i] = helpArr[i];
 
-        };
+
+        for (let i = 0; i < this.size(); i++) {
+
+            if (i < half) {
+
+                a[j] = this.arr[k];
+
+                j++;
+
+                k--;
+
+            } else {
+
+                a[j] = this.arr[l];
+
+                j++;
+
+                l--;
+
+            }
+
+        }
 
     } else {
 
-        for (let i = 0, j = halfLen + 1; i < halfLen + 1 && j < len; i++, j++) {
+        let median = (this.size() - 1) / 2;
 
-            helpArr[i] = this.arr[j];
+        let k = median - 1;
 
-            this.arr[j] = this.arr[i];
 
-            this.arr[i] = helpArr[i];
 
-        };
+        for (let i = 0; i < this.size(); i++) {
+
+            if (i < median) {
+
+                a[j] = this.arr[k];
+
+                j++;
+
+                k--;
+
+            } else if (i === median) {
+
+                a[j] = this.arr[median];
+
+                j++;
+
+            } else if (i > median) {
+
+                a[j] = this.arr[l];
+
+                j++;
+
+                l--;
+
+            }
+
+        }
 
     }
 
-    return this.arr;
-    /*  let left = null;
-     let right = null;
-     let length = this.size();
-     for (left = 0; left < this.size() / 2; left++) {
-         right = length - 1 - left;
-         var temporary = this.arr[left];
-         this.arr[left] = this.arr[right];
-         this.arr[right] = temporary;
-     }
-     return this.arr; */
+    this.arr = a;
+
 
 
 }
@@ -263,21 +295,7 @@ AList.prototype.halfreverse = function() {
 
 let aList = new AList([5, 2, 9, 4]);
 
-let aList1 = new AList([5, 2, 9, 4]);
-let aList2 = new AList([5, 2, 9, 4]);
-let aList3 = new AList([5, 2, 9, 4]);
-let aList4 = new AList([5, 2, 9, 4]);
-let aList5 = new AList([5, 2, 9, 4]);
-let aList6 = new AList([5, 2, 9, 4]);
-let aList7 = new AList([5, 2, 9, 4]);
-let aList8 = new AList([5, 2, 9, 4]);
-let aList9 = new AList([5, 2, 9, 4]);
-let aList10 = new AList([5, 2, 9, 4]);
-let aList11 = new AList([5, 2, 9, 4]);
-let aList12 = new AList([5, 2, 9, 4]);
-let aList13 = new AList([5, 2, 9, 4]);
-let aList14 = new AList([5, 2, 9, 4]);
-let aList15 = new AList([5, 2, 9, 4]);
+
 /* console.log(aList.defaultArray);
 console.log(aList.init());
 console.log(aList.size());
