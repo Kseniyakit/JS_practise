@@ -193,7 +193,6 @@ AList.prototype.minIndex = function() {
             index = i;
         }
     }
-
     return index;
 }
 AList.prototype.reverse = function() {
@@ -292,9 +291,9 @@ AList.prototype.halfR = function() {
 
 }
 
-
-let aList = new AList([5, 2, 9, 4]);
-
+/* 
+let aList = new AList([5, 2, 9, 4]); */
+module.exports.AList = AList;
 
 /* console.log(aList.defaultArray);
 console.log(aList.init());
