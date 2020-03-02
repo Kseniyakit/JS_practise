@@ -1,4 +1,5 @@
-const Node = require('./node/node');
+const Node = require('././node/node');
+const List = require('././List/List');
 
 function lList(array) {
     List.apply(this, arguments);
